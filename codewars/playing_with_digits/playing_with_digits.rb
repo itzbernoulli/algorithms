@@ -10,4 +10,11 @@ def dig_pow(n, p)
     k = sum/n
   end
   k
+
+
+  #SHORTER SOLUTION
+
+  sum = n.digits.reserse.each_with_index.sum{|v,i| v**(p+i)}
+
+  sum % n != 0 ? sum/n : -1
 end
